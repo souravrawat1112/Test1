@@ -1,5 +1,7 @@
 
-
+package simple.java.program;
+import simple.java.program.TestSorting;
+import java.util.Comparator;
 
 public class SortObjects {
     
@@ -26,6 +28,18 @@ public class SortObjects {
         this.id = id;
     }
     
+    
+         public static Comparator<SortObjects> EmpId = new Comparator<SortObjects>() {
+
+	public int compare(SortObjects e1, SortObjects e2) {
+
+	   int id1 = e1.getId();
+	   int id2 = e2.getId();
+
+	
+	   return id1-id2;
+
+   }};
   
     
     public String toString(){
